@@ -286,62 +286,8 @@ msgs.dataset.greeted='1';
 };
 
 async function answer(q){
-
-const l = lang();
-
-const quizPattern =
-/a\)|b\)|c\)|d\)|which of the following|quiz|mcq|correct answer/i;
-
-if(quizPattern.test(q)){
-    return l==='bn'
-      ? 'আমি সরাসরি কুইজের উত্তর দিতে পারি না, তবে ধারণাটি ব্যাখ্যা করতে পারি।'
-      : l==='fr'
-      ? 'Je ne peux pas donner directement les réponses du quiz.'
-      : l==='ar'
-      ? 'لا أستطيع إعطاء إجابات الاختبارات مباشرة.'
-      : "I can't provide direct quiz answers, but I can explain the concept.";
+  return "Gemini connection test successful.";
 }
-
-try {
-
-const response = await fetch(
-`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AQ.Ab8RN6IqzFkhwEGHaR26Vhf9CP0p_D4YziW2dpp4aMTZoYn8Ug`,
-{
-  method:"POST",
-  headers:{
-    "Content-Type":"application/json"
-  },
-  body:JSON.stringify({
-    contents:[
-      {
-        parts:[
-          {
-            text:`
-You are Lumi, the AI Tutor for HerWILL Sprout.
-
-Rules:
-- Explain AI concepts.
-- Help with lessons and projects.
-- Give examples.
-- Respond in ${
-l==="bn" ? "Bangla" :
-l==="fr" ? "French" :
-l==="ar" ? "Arabic" :
-"English"
-}.
-- Never provide direct quiz answers.
-- If the topic is unrelated to education or HerWILL, provide a brief generic response.
-
-Student question:
-${q}
-`
-          }
-        ]
-      }
-    ]
-  })
-}
-);
 
 const data = await response.json();
 
