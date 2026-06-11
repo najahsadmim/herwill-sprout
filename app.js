@@ -305,7 +305,7 @@ if(quizPattern.test(q)){
 try {
 
 const response = await fetch(
-`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AQ.Ab8RN6IqzFkhwEGHaR26Vhf9CP0p_D4YziW2dpp4aMTZoYn8Ug`,
+`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=MYKEY`,
 {
   method:"POST",
   headers:{
