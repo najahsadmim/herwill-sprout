@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HerWILL Sprout - inclusive AI learning for curious young minds.">
+  <title>HerWILL Sprout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="HerWILL Sprout home">
+      <img src="herwill-logo.png" alt="HerWILL">
+      <span>SPROUT</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#home" data-nav="home" data-i18n="navHome">Home</a>
+      <a href="#courses" data-nav="courses" data-i18n="navCourses">Courses</a>
+      <a href="#projects" data-nav="projects" data-i18n="navProjects">Projects</a>
+      <a href="#account" data-nav="account" data-i18n="navAccount">My Account</a>
+    </nav>
+    <div class="header-actions">
+      <label class="language-select">
+        <span class="sr-only">Choose language</span>
+        <select id="language">
+          <option value="en">English</option>
+          <option value="bn">বাংলা</option>
+          <option value="fr">Français</option>
+          <option value="ar">العربية</option>
+        </select>
+      </label>
+      <a class="button button-small button-navy desktop-start" href="#courses" data-i18n="start">Start learning</a>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <img class="footer-logo" src="herwill-logo.png" alt="HerWILL">
+        <p id="footer-description">Building pathways for women and youth worldwide to learn AI, data science, and future-ready skills.</p>
+        <div class="social-row">
+          <a href="https://www.facebook.com/HerWILL.org" target="_blank" rel="noreferrer" aria-label="Facebook">f</a>
+          <a href="https://www.youtube.com/@herwill-global" target="_blank" rel="noreferrer" aria-label="YouTube">▶</a>
+          <a href="https://www.instagram.com/herwill_global/" target="_blank" rel="noreferrer" aria-label="Instagram">◎</a>
+          <a href="https://www.linkedin.com/company/herwill" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div>
+        <h3 id="footer-explore-title">Explore</h3>
+        <a href="#courses" data-i18n="navCourses">Courses</a>
+        <a href="#projects" data-i18n="navProjects">Projects</a>
+        <a href="#account" id="footer-learning">My learning</a>
+      </div>
+      <div>
+        <h3>HerWILL</h3>
+        <a href="https://www.herwill.org/about-herwill" target="_blank" rel="noreferrer">About HerWILL</a>
+        <a href="https://www.herwill.org/our-impact" target="_blank" rel="noreferrer">Our impact</a>
+        <a href="https://www.herwill.org/join-us" target="_blank" rel="noreferrer">Get involved</a>
+      </div>
+      <div>
+        <h3 id="footer-connect-title">Stay connected</h3>
+        <p id="footer-connect-body">Questions or feedback? We would love to hear from you.</p>
+        <a class="footer-contact" href="mailto:leadership@herwill.org">leadership@herwill.org</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 HerWILL. All rights reserved.</span>
+      <span>Educate. Elevate. Empower.</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  
+  <div id="sprout-chatbot" class="sprout-chatbot">
+    <button id="chatbot-toggle" class="chatbot-toggle">🌱 AI Tutor</button>
+    <div id="chatbot-panel" class="chatbot-panel">
+      <div class="chatbot-header">HerWILL Sprout AI Tutor</div>
+      <div id="chatbot-messages" class="chatbot-messages">
+        <div class="bot-msg">Hi! I can help explain course concepts, projects, AI topics in Sprout, and give examples. I won't answer quiz questions directly.</div>
+      </div>
+      <div class="chatbot-input-row">
+        <input id="chatbot-input" type="text" placeholder="Ask about your lesson..." />
+        <button id="chatbot-send">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
