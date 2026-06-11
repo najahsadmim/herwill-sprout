@@ -305,7 +305,7 @@ if(quizPattern.test(q)){
 try {
 
 const response = await fetch(
-`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AQ.Ab8RN6IqzFkhwEGHaR26Vhf9CP0p_D4YziW2dpp4aMTZoYn8Ug`,
+`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AQ.Ab8RN6IqzFkhwEGHaR26Vhf9CP0p_D4YziW2dpp4aMTZoYn8Ug`,
 {
   method:"POST",
   headers:{
@@ -344,6 +344,15 @@ ${q}
 );
 
 const data = await response.json();
+
+console.log("STATUS:", response.status);
+console.log("DATA:", data);
+
+if (!response.ok) {
+  return `Gemini Error ${response.status}: ${
+    data?.error?.message || "Unknown error"
+  }`;
+}
 
 return data?.candidates?.[0]?.content?.parts?.[0]?.text ||
        i18nTutor[l].fallback;
