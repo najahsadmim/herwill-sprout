@@ -265,10 +265,10 @@ const input=document.getElementById("chatbot-input");
 if(!toggle)return;
 
 const i18nTutor={
-en:{greet:"Hi Samira! Welcome to HerWILL Sprout 🌱. I am your personal AI tutor. I can explain lessons, projects and AI concepts. Ask me anything!",fallback:"Can you ask about a lesson, project or AI topic in Sprout?"},
-bn:{greet:"হ্যালো! HerWILL Sprout-এ স্বাগতম 🌱। আমি তোমার ব্যক্তিগত AI Tutor। AI, কোর্স ও প্রজেক্ট সম্পর্কে জিজ্ঞাসা করো।",fallback:"কোর্স বা AI বিষয়ক প্রশ্ন করো।"},
-fr:{greet:"Bonjour! Bienvenue sur HerWILL Sprout 🌱. Je suis votre tuteur IA personnel.",fallback:"Posez une question sur les cours ou l'IA."},
-ar:{greet:"مرحباً! أهلاً بك في HerWILL Sprout 🌱. أنا معلمك الشخصي للذكاء الاصطناعي.",fallback:"اسأل عن الدروس أو الذكاء الاصطناعي."}
+en:{greet:"Hi there! I am Lumi, your personal AI Tutor at HerWILL Sprout 🌱 I am here to help you learn, grow, and guide you through everything here and beyond. So don't be shy and ask away!"},
+bn:{greet:"হ্যালো! আমি লুমি, HerWILL Sprout-এর তোমার ব্যক্তিগত AI Tutor 🌱 আমি তোমাকে শিখতে, এগিয়ে যেতে এবং এখানে থাকা সবকিছু বুঝতে সাহায্য করব। তাই লজ্জা পেও না, যা জানতে চাও নির্দ্বিধায় জিজ্ঞাসা করো!"},
+fr:{greet:"Bonjour ! Je suis Lumi, votre tuteur IA personnel chez HerWILL Sprout 🌱 Je suis là pour vous aider à apprendre, progresser et vous guider à travers tout ce qui se trouve ici et au-delà. Alors n'hésitez pas à poser vos questions !"},
+ar:{greet:"مرحباً! أنا لومي، معلمك الشخصي للذكاء الاصطناعي في HerWILL Sprout 🌱 أنا هنا لمساعدتك على التعلّم والتطور وإرشادك خلال كل ما ستجده هنا وأكثر. لذلك لا تتردد في طرح أي سؤال!"}
 };
 
 function lang(){return document.getElementById('language')?.value || 'en';}
