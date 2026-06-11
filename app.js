@@ -361,4 +361,4 @@ const reply = await answer(q);
 
 msgs.lastChild.textContent = reply;
 
-};
+});
