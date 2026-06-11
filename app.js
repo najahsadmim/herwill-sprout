@@ -303,7 +303,9 @@ return l==='bn'
 
 for(const item of lumiKnowledge){
 
-if(item.keywords.some(keyword => qq.includes(keyword))){
+if(item.keywords.some(keyword =>
+    new RegExp(`\\b${keyword}\\b`, 'i').test(qq)
+)){
 
 return item.responses[l] || item.responses.en;
 }
