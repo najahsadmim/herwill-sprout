@@ -285,42 +285,80 @@ msgs.dataset.greeted='1';
 }
 };
 
-function answer(q){
-const l=lang();
-const t=i18nTutor[l];
+async function answer(q){
 
-const qq=q.toLowerCase();
+const l = lang();
 
-if(/a\)|b\)|c\)|d\)|which of the following|quiz|mcq|correct answer/.test(qq))
-return l==='bn'?'আমি সরাসরি কুইজের উত্তর দিতে পারি না, তবে ধারণাটি ব্যাখ্যা করতে পারি.':
-l==='fr'?'Je ne peux pas donner directement les réponses du quiz.':
-l==='ar'?'لا أستطيع إعطاء إجابات الاختبارات مباشرة.':
-"I can't provide direct quiz answers, but I can explain the concept.";
+const quizPattern =
+/a\)|b\)|c\)|d\)|which of the following|quiz|mcq|correct answer/i;
 
-if(qq.includes('what is ai')||qq=='ai')
-return 'Artificial Intelligence (AI) enables computers to perform tasks that usually require human intelligence such as recognizing images, understanding language and making decisions.';
-
-if(qq.includes('machine learning')||qq.includes('ml'))
-return 'Machine Learning is a branch of AI where computers learn patterns from examples instead of following only fixed rules.';
-
-if(qq.includes('computer vision'))
-return 'Computer Vision helps computers understand and analyze images and videos.';
-
-if(qq.includes('responsible ai'))
-return 'Responsible AI focuses on fairness, privacy, transparency and safety.';
-
-if(qq.includes('where') && qq.includes('computer vision'))
-return 'Computer Vision can be found in the Grades 6–8 course pathway.';
-
-if(qq.includes('project'))
-return 'I recommend AI Answer Detective or Train an Image Classifier depending on your grade level.';
-
-return t.fallback;
+if(quizPattern.test(q)){
+    return l==='bn'
+      ? 'আমি সরাসরি কুইজের উত্তর দিতে পারি না, তবে ধারণাটি ব্যাখ্যা করতে পারি।'
+      : l==='fr'
+      ? 'Je ne peux pas donner directement les réponses du quiz.'
+      : l==='ar'
+      ? 'لا أستطيع إعطاء إجابات الاختبارات مباشرة.'
+      : "I can't provide direct quiz answers, but I can explain the concept.";
 }
 
-send.onclick=()=>{
-const q=input.value.trim(); if(!q) return;
-add(q,'user-msg'); input.value='';
-add(answer(q),'bot-msg');
+const response = await fetch(
+`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AQ.Ab8RN6IqzFkhwEGHaR26Vhf9CP0p_D4YziW2dpp4aMTZoYn8Ug`,
+{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+contents:[{
+parts:[{
+text:`
+You are Lumi, the AI Tutor for HerWILL Sprout.
+
+Rules:
+- Help students learn AI concepts.
+- Explain lessons and projects.
+- Give examples.
+- Respond in ${
+l==="bn" ? "Bangla" :
+l==="fr" ? "French" :
+l==="ar" ? "Arabic" :
+"English"
+}.
+- Never provide direct quiz answers.
+- If the topic is unrelated to education or HerWILL, provide a brief generic response.
+
+Student question:
+${q}
+`
+}]
+}]
+})
+}
+);
+
+const data = await response.json();
+
+return (
+data.candidates?.[0]?.content?.parts?.[0]?.text ||
+"Sorry, I couldn't generate a response."
+);
+}
+
+send.onclick = async () => {
+
+const q = input.value.trim();
+
+if(!q) return;
+
+add(q,'user-msg');
+
+input.value='';
+
+add('Thinking...','bot-msg');
+
+const reply = await answer(q);
+
+msgs.lastChild.textContent = reply;
+
 };
-});
