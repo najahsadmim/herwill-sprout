@@ -41,52 +41,112 @@ ar:"أنا لومي، معلمك للذكاء الاصطناعي في HerWILL Sp
 },
 
 {
+keywords:["hi","hello","hey","good morning","good afternoon","good evening"],
+responses:{
+en:"Hello! 🌱 I am Lumi, your AI Tutor at HerWILL Sprout. What would you like to learn today?",
+bn:"হ্যালো! 🌱 আমি লুমি, HerWILL Sprout-এর AI Tutor। আজ তুমি কী শিখতে চাও?",
+fr:"Bonjour ! 🌱 Je suis Lumi, votre tuteur IA chez HerWILL Sprout. Que souhaitez-vous apprendre aujourd'hui ?",
+ar:"مرحباً! 🌱 أنا لومي، معلم الذكاء الاصطناعي الخاص بك في HerWILL Sprout. ماذا تريد أن تتعلم اليوم؟"
+}
+},
+
+{
+keywords:["how are you","how are u"],
+responses:{
+en:"I'm doing great! 🌱 Ready to help you learn and explore AI.",
+bn:"আমি খুব ভালো আছি! 🌱 আমি তোমাকে AI শিখতে ও অন্বেষণ করতে সাহায্য করতে প্রস্তুত।",
+fr:"Je vais très bien ! 🌱 Je suis prêt à vous aider à apprendre et explorer l'IA.",
+ar:"أنا بخير جداً! 🌱 أنا مستعد لمساعدتك على تعلم واستكشاف الذكاء الاصطناعي."
+}
+},
+
+{
+keywords:["who are you","your name","introduce yourself"],
+responses:{
+en:"I am Lumi, the AI Tutor of HerWILL Sprout. I help students learn AI concepts, explore projects and discover technology in a fun and safe way.",
+bn:"আমি লুমি, HerWILL Sprout-এর AI Tutor। আমি শিক্ষার্থীদের AI শিখতে, প্রকল্প অন্বেষণ করতে এবং নিরাপদ ও আনন্দদায়ক উপায়ে প্রযুক্তি জানতে সাহায্য করি।",
+fr:"Je suis Lumi, le tuteur IA de HerWILL Sprout. J'aide les élèves à apprendre l'IA, découvrir des projets et explorer la technologie de manière amusante et sûre.",
+ar:"أنا لومي، معلم الذكاء الاصطناعي في HerWILL Sprout. أساعد الطلاب على تعلم الذكاء الاصطناعي واستكشاف المشاريع والتكنولوجيا بطريقة ممتعة وآمنة."
+}
+},
+
+{
 keywords:["what is ai","define ai","artificial intelligence"],
 responses:{
-en:"Artificial Intelligence (AI) enables computers to learn, reason and make decisions from data.",
-bn:"কৃত্রিম বুদ্ধিমত্তা (AI) কম্পিউটারকে তথ্য থেকে শিখতে ও সিদ্ধান্ত নিতে সাহায্য করে।",
-fr:"L’intelligence artificielle permet aux ordinateurs d’apprendre et de prendre des décisions.",
-ar:"يساعد الذكاء الاصطناعي الحواسيب على التعلم واتخاذ القرارات."
+en:"Artificial Intelligence (AI) enables computers to perform tasks that normally require human intelligence, such as recognizing images, understanding language and making decisions.",
+bn:"কৃত্রিম বুদ্ধিমত্তা (AI) কম্পিউটারকে এমন কাজ করতে সাহায্য করে যা সাধারণত মানুষের বুদ্ধিমত্তার প্রয়োজন হয়, যেমন ছবি শনাক্ত করা, ভাষা বোঝা এবং সিদ্ধান্ত নেওয়া।",
+fr:"L'intelligence artificielle (IA) permet aux ordinateurs d'effectuer des tâches qui nécessitent normalement l'intelligence humaine, comme reconnaître des images, comprendre le langage et prendre des décisions.",
+ar:"يُمكّن الذكاء الاصطناعي الحواسيب من أداء مهام تتطلب عادةً ذكاءً بشرياً، مثل التعرف على الصور وفهم اللغة واتخاذ القرارات."
 }
 },
 
 {
 keywords:["machine learning","ml"],
 responses:{
-en:"Machine Learning is a branch of AI where computers learn patterns from examples instead of following fixed instructions.",
-bn:"মেশিন লার্নিং হলো AI-এর একটি শাখা যেখানে কম্পিউটার উদাহরণ থেকে শেখে।",
-fr:"L’apprentissage automatique est une branche de l’IA basée sur l’apprentissage à partir d’exemples.",
-ar:"التعلم الآلي هو فرع من الذكاء الاصطناعي يتعلم من الأمثلة."
+en:"Machine Learning is a branch of AI where computers learn patterns from examples and data instead of following only fixed instructions.",
+bn:"মেশিন লার্নিং হলো AI-এর একটি শাখা যেখানে কম্পিউটার উদাহরণ ও ডেটা থেকে শিখে এবং প্যাটার্ন শনাক্ত করতে শেখে।",
+fr:"Le Machine Learning est une branche de l'IA où les ordinateurs apprennent à partir de données et d'exemples au lieu de suivre uniquement des instructions fixes.",
+ar:"التعلم الآلي هو فرع من الذكاء الاصطناعي تتعلم فيه الحواسيب من البيانات والأمثلة بدلاً من اتباع تعليمات ثابتة فقط."
 }
 },
 
 {
 keywords:["deep learning"],
 responses:{
-en:"Deep Learning uses layers of artificial neural networks to solve complex problems such as image and speech recognition.",
-bn:"ডিপ লার্নিং জটিল সমস্যা সমাধানে বহুস্তর বিশিষ্ট নিউরাল নেটওয়ার্ক ব্যবহার করে।",
-fr:"Le Deep Learning utilise des réseaux neuronaux pour résoudre des problèmes complexes.",
-ar:"يستخدم التعلم العميق الشبكات العصبية لحل المشكلات المعقدة."
+en:"Deep Learning is a type of Machine Learning that uses artificial neural networks to solve complex problems such as image recognition and speech understanding.",
+bn:"ডিপ লার্নিং হলো মেশিন লার্নিং-এর একটি উন্নত ধরণ যা কৃত্রিম নিউরাল নেটওয়ার্ক ব্যবহার করে জটিল সমস্যা সমাধান করে।",
+fr:"Le Deep Learning est une forme avancée de Machine Learning qui utilise des réseaux neuronaux artificiels pour résoudre des problèmes complexes.",
+ar:"التعلم العميق هو نوع متقدم من التعلم الآلي يستخدم الشبكات العصبية الاصطناعية لحل المشكلات المعقدة."
 }
 },
 
 {
-keywords:["computer vision"],
+keywords:["generative ai"],
 responses:{
-en:"Computer Vision helps computers understand and analyze images and videos.",
-bn:"কম্পিউটার ভিশন কম্পিউটারকে ছবি ও ভিডিও বুঝতে সাহায্য করে।",
-fr:"La vision par ordinateur aide les ordinateurs à comprendre les images et vidéos.",
-ar:"تساعد الرؤية الحاسوبية الحواسيب على فهم الصور ومقاطع الفيديو."
+en:"Generative AI creates new content such as text, images, audio and code by learning patterns from existing information.",
+bn:"জেনারেটিভ AI বিদ্যমান তথ্য থেকে শেখার মাধ্যমে নতুন লেখা, ছবি, অডিও এবং কোড তৈরি করতে পারে।",
+fr:"L'IA générative crée de nouveaux contenus tels que du texte, des images, de l'audio et du code en apprenant à partir d'informations existantes.",
+ar:"يقوم الذكاء الاصطناعي التوليدي بإنشاء محتوى جديد مثل النصوص والصور والصوت والبرمجيات من خلال التعلم من المعلومات الموجودة."
 }
 },
 
 {
-keywords:["nlp","natural language processing"],
+keywords:["pattern recognition"],
 responses:{
-en:"Natural Language Processing allows computers to understand and generate human language.",
-bn:"ন্যাচারাল ল্যাঙ্গুয়েজ প্রসেসিং কম্পিউটারকে মানুষের ভাষা বুঝতে সাহায্য করে।",
-fr:"Le traitement du langage naturel permet aux ordinateurs de comprendre le langage humain.",
-ar:"تمكن معالجة اللغة الطبيعية الحواسيب من فهم اللغة البشرية."
+en:"Pattern recognition is the ability of a computer to identify similarities, trends and relationships in data. Face recognition on phones is a common example.",
+bn:"প্যাটার্ন রিকগনিশন হলো ডেটার মধ্যে মিল, প্রবণতা এবং সম্পর্ক খুঁজে বের করার কম্পিউটারের ক্ষমতা। ফোনের ফেস আনলক এর একটি সাধারণ উদাহরণ।",
+fr:"La reconnaissance de formes est la capacité d'un ordinateur à identifier des similitudes, des tendances et des relations dans les données.",
+ar:"التعرف على الأنماط هو قدرة الحاسوب على اكتشاف أوجه التشابه والاتجاهات والعلاقات داخل البيانات."
+}
+},
+
+{
+keywords:["computer vision","image recognition"],
+responses:{
+en:"Computer Vision helps computers understand and analyze images and videos. It is used in facial recognition, self-driving cars and medical imaging.",
+bn:"কম্পিউটার ভিশন কম্পিউটারকে ছবি ও ভিডিও বুঝতে এবং বিশ্লেষণ করতে সাহায্য করে। এটি মুখ শনাক্তকরণ, স্বয়ংচালিত গাড়ি এবং চিকিৎসা চিত্র বিশ্লেষণে ব্যবহৃত হয়।",
+fr:"La vision par ordinateur aide les ordinateurs à comprendre et analyser les images et vidéos. Elle est utilisée dans la reconnaissance faciale et les véhicules autonomes.",
+ar:"تساعد الرؤية الحاسوبية الحواسيب على فهم الصور ومقاطع الفيديو وتحليلها. وتستخدم في التعرف على الوجوه والسيارات ذاتية القيادة."
+}
+},
+
+{
+keywords:["natural language processing","nlp"],
+responses:{
+en:"Natural Language Processing (NLP) allows computers to understand, interpret and generate human language.",
+bn:"ন্যাচারাল ল্যাঙ্গুয়েজ প্রসেসিং (NLP) কম্পিউটারকে মানুষের ভাষা বুঝতে, বিশ্লেষণ করতে এবং তৈরি করতে সাহায্য করে।",
+fr:"Le traitement du langage naturel (NLP) permet aux ordinateurs de comprendre, interpréter et générer le langage humain.",
+ar:"تسمح معالجة اللغة الطبيعية للحواسيب بفهم اللغة البشرية وتفسيرها وإنشائها."
+}
+},
+
+{
+keywords:["where is ai used","examples of ai","ai examples","use of ai"],
+responses:{
+en:"AI is used in voice assistants, recommendation systems, healthcare, transportation, education, translation tools, smart devices and many everyday applications.",
+bn:"AI ব্যবহার করা হয় ভয়েস অ্যাসিস্ট্যান্ট, সুপারিশ ব্যবস্থা, স্বাস্থ্যসেবা, পরিবহন, শিক্ষা, অনুবাদ সরঞ্জাম এবং স্মার্ট ডিভাইসে।",
+fr:"L'IA est utilisée dans les assistants vocaux, les systèmes de recommandation, la santé, les transports, l'éducation et les appareils intelligents.",
+ar:"يُستخدم الذكاء الاصطناعي في المساعدات الصوتية وأنظمة التوصية والرعاية الصحية والنقل والتعليم والأجهزة الذكية."
 }
 },
 
@@ -108,9 +168,243 @@ bn:"তোমার শ্রেণি অনুযায়ী AI Answer Detective
 fr:"Essayez AI Answer Detective ou Image Classification selon votre niveau.",
 ar:"يمكنك تجربة مشاريع AI Answer Detective أو Image Classification حسب مستواك."
 }
+},
+
+{
+keywords:["what is herwill","who is herwill","tell me about herwill"],
+responses:{
+en:"HerWILL is a youth-led organization dedicated to empowering girls and young people through education, leadership, technology and innovation. HerWILL creates opportunities for learning, skill development and community impact.",
+bn:"HerWILL একটি যুব-নেতৃত্বাধীন সংগঠন যা শিক্ষা, নেতৃত্ব, প্রযুক্তি ও উদ্ভাবনের মাধ্যমে মেয়ে ও তরুণদের ক্ষমতায়নে কাজ করে। HerWILL শেখা, দক্ষতা উন্নয়ন এবং সমাজে ইতিবাচক প্রভাব তৈরির সুযোগ সৃষ্টি করে।",
+fr:"HerWILL est une organisation dirigée par des jeunes qui vise à autonomiser les filles et les jeunes grâce à l'éducation, au leadership, à la technologie et à l'innovation. HerWILL crée des opportunités d'apprentissage, de développement des compétences et d'impact communautaire.",
+ar:"HerWILL هي منظمة يقودها الشباب وتهدف إلى تمكين الفتيات والشباب من خلال التعليم والقيادة والتكنولوجيا والابتكار. توفر HerWILL فرصاً للتعلم وتنمية المهارات وإحداث تأثير إيجابي في المجتمع."
+}
+},
+
+{
+keywords:["what is herwill sprout","tell me about herwill sprout"],
+responses:{
+en:"HerWILL Sprout is an educational platform developed by HerWILL to make Artificial Intelligence education accessible, engaging and age-appropriate for children and young learners worldwide.",
+bn:"HerWILL Sprout হলো HerWILL-এর তৈরি একটি শিক্ষামূলক প্ল্যাটফর্ম, যা শিশু ও তরুণ শিক্ষার্থীদের জন্য কৃত্রিম বুদ্ধিমত্তা (AI) শিক্ষা সহজলভ্য, আকর্ষণীয় এবং বয়সোপযোগী করে তুলতে তৈরি করা হয়েছে।",
+fr:"HerWILL Sprout est une plateforme éducative développée par HerWILL pour rendre l'apprentissage de l'intelligence artificielle accessible, engageant et adapté à l'âge des enfants et des jeunes apprenants du monde entier.",
+ar:"HerWILL Sprout هي منصة تعليمية طورتها HerWILL لجعل تعليم الذكاء الاصطناعي متاحاً وممتعاً ومناسباً لأعمار الأطفال والمتعلمين الصغار حول العالم."
+}
+},
+
+{
+keywords:["what is herwill sprout","tell me about herwill sprout"],
+responses:{
+en:"HerWILL Sprout is an educational platform developed by HerWILL to make Artificial Intelligence education accessible, engaging and age-appropriate for children and young learners worldwide."
+}
+},
+
+{
+keywords:["why was herwill sprout created","purpose of herwill sprout"],
+responses:{
+en:"HerWILL Sprout was created to address the lack of accessible AI education for children and young learners. It helps students develop AI literacy, problem-solving skills and responsible technology awareness."
+}
+},
+
+{
+keywords:["who can use herwill sprout","who is herwill sprout for"],
+responses:{
+en:"HerWILL Sprout is designed for students across different grade levels. Lessons, activities and projects are tailored to the learner's age and learning stage."
+}
+},
+
+{
+keywords:["what makes herwill sprout different","why choose herwill sprout"],
+responses:{
+en:"HerWILL Sprout combines age-appropriate AI education, multilingual learning, project-based activities, responsible AI principles and accessible learning pathways for students of different backgrounds."
+}
+},
+
+{
+keywords:["languages supported","what languages","multiple languages"],
+responses:{
+en:"HerWILL Sprout supports English, Bangla, French and Arabic to make AI education accessible to learners worldwide."
+}
+},
+
+{
+keywords:["what is lumi","who is lumi"],
+responses:{
+en:"Lumi is the AI Tutor of HerWILL Sprout. I help students understand lessons, discover projects and learn AI concepts through explanations and examples."
+}
+},
+
+{
+keywords:["what can lumi do","what can you do"],
+responses:{
+en:"I can explain AI concepts, answer questions about HerWILL Sprout, recommend projects, guide learning pathways and help students understand technology."
+}
+},
+
+{
+keywords:["chatbot"],
+responses:{
+en:"A chatbot is a computer program that can communicate with people through text or voice. Lumi is an example of an educational chatbot."
+}
+},
+
+{
+keywords:["algorithm"],
+responses:{
+en:"An algorithm is a set of step-by-step instructions used to solve a problem or complete a task."
+}
+},
+
+{
+keywords:["training data","dataset","data set"],
+responses:{
+en:"Training data is the information used to teach an AI model. The quality of the training data greatly affects the quality of the AI system."
+}
+},
+
+{
+keywords:["speech recognition"],
+responses:{
+en:"Speech recognition enables computers to understand spoken language and convert speech into text."
+}
+},
+
+{
+keywords:["robotics"],
+responses:{
+en:"Robotics combines engineering, computing and AI to design machines that can perform tasks automatically."
+}
+},
+
+{
+keywords:["ai in healthcare"],
+responses:{
+en:"AI helps doctors analyze medical images, detect diseases earlier and support healthcare decisions."
+}
+},
+
+{
+keywords:["ai in education"],
+responses:{
+en:"AI can personalize learning, recommend study materials, provide tutoring support and help teachers understand student progress."
+}
+},
+
+{
+keywords:["responsible ai","ai ethics"],
+responses:{
+en:"Responsible AI focuses on fairness, transparency, privacy, accountability and safety when developing and using AI systems."
+}
+},
+
+{
+keywords:["bias"],
+responses:{
+en:"AI bias occurs when an AI system produces unfair results because of issues in its training data or design."
+}
+},
+
+{
+keywords:["fairness"],
+responses:{
+en:"Fairness means AI systems should treat people equally and avoid unfair discrimination."
+}
+},
+
+{
+keywords:["privacy"],
+responses:{
+en:"Privacy is the protection of personal information and ensuring that data is used responsibly."
+}
+},
+
+{
+keywords:["cybersecurity","online safety","digital safety"],
+responses:{
+en:"Cybersecurity helps protect devices, accounts and information from unauthorized access and online threats."
+}
+},
+
+{
+keywords:["recommend project","project recommendation","suggest project"],
+responses:{
+en:"I recommend choosing a project based on your grade level. Beginners can try AI Answer Detective, while advanced learners can explore image classification and responsible AI projects."
+}
+},
+
+{
+keywords:["beginner project"],
+responses:{
+en:"A good beginner project is AI Answer Detective, where students learn how AI identifies patterns and information."
+}
+},
+
+{
+keywords:["intermediate project"],
+responses:{
+en:"An intermediate project could involve training a simple image classifier or exploring how recommendation systems work."
+}
+},
+
+{
+keywords:["advanced project"],
+responses:{
+en:"Advanced learners can explore responsible AI challenges, computer vision applications or machine learning experiments."
+}
+},
+
+{
+keywords:["mobile friendly project"],
+responses:{
+en:"Mobile-friendly projects are designed to be completed using a smartphone, making learning more accessible."
+}
+},
+
+{
+keywords:["no device project"],
+responses:{
+en:"No-device projects help students learn AI concepts through discussions, activities and critical thinking exercises without requiring technology."
+}
+},
+
+{
+keywords:["where are my projects","my projects"],
+responses:{
+en:"Saved projects can be found in the My Projects section of My Account."
+}
+},
+
+{
+keywords:["where are my courses","my courses"],
+responses:{
+en:"Your saved and active courses can be found in the My Courses section of My Account."
+}
+},
+
+{
+keywords:["where are my downloads","downloads"],
+responses:{
+en:"Downloaded learning materials can be found in the Downloads section of My Account."
+}
+},
+
+{
+keywords:["where are my activities","activities"],
+responses:{
+en:"Submitted activities can be found in the Activities section of My Account."
+}
+},
+
+{
+keywords:["how do i complete a course"],
+responses:{
+en:"To complete a course, submit all activities and achieve at least 70% on all quizzes. This will unlock 100% course progress."
+}
 }
 
 ];
+
+const lumiFallback = {
+en:"I am designed to help with HerWILL Sprout lessons, projects, AI concepts and student learning. Could you rephrase your question or ask about AI, technology, HerWILL or HerWILL Sprout?"
+};
 
 const lumiFallback = {
 en:"I am designed to help with HerWILL Sprout lessons, projects and AI learning. Please ask me something related to AI, technology or your course.",
