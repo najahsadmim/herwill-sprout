@@ -403,10 +403,6 @@ en:"To complete a course, submit all activities and achieve at least 70% on all 
 ];
 
 const lumiFallback = {
-en:"I am designed to help with HerWILL Sprout lessons, projects, AI concepts and student learning. Could you rephrase your question or ask about AI, technology, HerWILL or HerWILL Sprout?"
-};
-
-const lumiFallback = {
 en:"I am designed to help with HerWILL Sprout lessons, projects and AI learning. Please ask me something related to AI, technology or your course.",
 bn:"আমি HerWILL Sprout-এর পাঠ, প্রজেক্ট ও AI শেখার বিষয়ে সাহায্য করার জন্য তৈরি।",
 fr:"Je suis conçu pour aider avec les cours, projets et concepts d’IA de HerWILL Sprout.",
