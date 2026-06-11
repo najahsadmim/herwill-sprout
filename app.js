@@ -290,7 +290,7 @@ function answer(q){
 const l = lang();
 const qq = q.toLowerCase();
 
-if(/a)|b)|c)|d)|which of the following|quiz|mcq|correct answer/.test(qq)){
+if(/a\)|b\)|c\)|d\)|which of the following|quiz|mcq|correct answer/i.test(qq)){
 
 return l==='bn'
 ? 'আমি সরাসরি কুইজের উত্তর দিতে পারি না, তবে ধারণাটি ব্যাখ্যা করতে পারি।'
