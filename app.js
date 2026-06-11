@@ -256,97 +256,71 @@ window.addEventListener("hashchange",render);
 render();
 
 
-/* ===== Sprout AI Tutor ===== */
 document.addEventListener("DOMContentLoaded",()=>{
- const toggle=document.getElementById("chatbot-toggle");
- const panel=document.getElementById("chatbot-panel");
- const send=document.getElementById("chatbot-send");
- const input=document.getElementById("chatbot-input");
- const messages=document.getElementById("chatbot-messages");
+const toggle=document.getElementById("chatbot-toggle");
+const panel=document.getElementById("chatbot-panel");
+const msgs=document.getElementById("chatbot-messages");
+const send=document.getElementById("chatbot-send");
+const input=document.getElementById("chatbot-input");
+if(!toggle)return;
 
- if(!toggle) return;
+const i18nTutor={
+en:{greet:"Hi Samira! Welcome to HerWILL Sprout 🌱. I am your personal AI tutor. I can explain lessons, projects and AI concepts. Ask me anything!",fallback:"Can you ask about a lesson, project or AI topic in Sprout?"},
+bn:{greet:"হ্যালো! HerWILL Sprout-এ স্বাগতম 🌱। আমি তোমার ব্যক্তিগত AI Tutor। AI, কোর্স ও প্রজেক্ট সম্পর্কে জিজ্ঞাসা করো।",fallback:"কোর্স বা AI বিষয়ক প্রশ্ন করো।"},
+fr:{greet:"Bonjour! Bienvenue sur HerWILL Sprout 🌱. Je suis votre tuteur IA personnel.",fallback:"Posez une question sur les cours ou l'IA."},
+ar:{greet:"مرحباً! أهلاً بك في HerWILL Sprout 🌱. أنا معلمك الشخصي للذكاء الاصطناعي.",fallback:"اسأل عن الدروس أو الذكاء الاصطناعي."}
+};
 
- toggle.onclick=()=>{
-   panel.style.display=panel.style.display==="block"?"none":"block";
- };
+function lang(){return document.getElementById('language')?.value || 'en';}
 
- const knowledgeBase=`
- HerWILL Sprout teaches AI literacy through grade-based courses, activities, quizzes and projects.
- Topics include AI Basics, How Machines Learn, Computer Vision, Responsible AI, Datasets, Training Data, Testing and Project Building.
- Students must complete activities and pass quizzes with at least 70%.
- `;
+function add(text,cls){
+const d=document.createElement('div');d.className=cls;d.textContent=text;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight;
+}
 
- const addMsg=(text,type)=>{
-   const div=document.createElement("div");
-   div.className=type;
-   div.textContent=text;
-   messages.appendChild(div);
-   messages.scrollTop=messages.scrollHeight;
- };
+toggle.onclick=()=>{
+panel.style.display=panel.style.display==='block'?'none':'block';
+if(panel.style.display==='block' && !msgs.dataset.greeted){
+add(i18nTutor[lang()].greet,'bot-msg');
+msgs.dataset.greeted='1';
+}
+};
 
- function localResponse(q){
-   const query=q.toLowerCase();
+function answer(q){
+const l=lang();
+const t=i18nTutor[l];
 
-   if(query.includes("quiz") || query.includes("?") && (query.includes("answer") || query.includes("mcq"))){
-      return "I can't provide direct quiz answers. Instead, I can explain the underlying concept and help you think through it.";
-   }
+const qq=q.toLowerCase();
 
-   if(query.includes("machine learning") || query.includes("training data")){
-      return "Training data is a collection of examples used to teach a model. Better and more diverse examples usually improve performance.";
-   }
+if(/a\)|b\)|c\)|d\)|which of the following|quiz|mcq|correct answer/.test(qq))
+return l==='bn'?'আমি সরাসরি কুইজের উত্তর দিতে পারি না, তবে ধারণাটি ব্যাখ্যা করতে পারি.':
+l==='fr'?'Je ne peux pas donner directement les réponses du quiz.':
+l==='ar'?'لا أستطيع إعطاء إجابات الاختبارات مباشرة.':
+"I can't provide direct quiz answers, but I can explain the concept.";
 
-   if(query.includes("computer vision")){
-      return "Computer Vision helps computers understand images. It learns patterns from many labeled examples.";
-   }
+if(qq.includes('what is ai')||qq=='ai')
+return 'Artificial Intelligence (AI) enables computers to perform tasks that usually require human intelligence such as recognizing images, understanding language and making decisions.';
 
-   if(query.includes("project")){
-      return "Start by identifying a problem, collecting examples, testing your idea, and improving it based on results.";
-   }
+if(qq.includes('machine learning')||qq.includes('ml'))
+return 'Machine Learning is a branch of AI where computers learn patterns from examples instead of following only fixed rules.';
 
-   return "I'm HerWILL Sprout's AI Tutor. I can help explain course lessons, projects, AI concepts and learning materials. For unrelated topics, please refer to a general-purpose assistant.";
- }
+if(qq.includes('computer vision'))
+return 'Computer Vision helps computers understand and analyze images and videos.';
 
- async function askAI(prompt){
-   // OPTIONAL API INTEGRATION
-   // Replace YOUR_API_KEY and endpoint before deployment.
-   const USE_API=false;
+if(qq.includes('responsible ai'))
+return 'Responsible AI focuses on fairness, privacy, transparency and safety.';
 
-   if(!USE_API) return localResponse(prompt);
+if(qq.includes('where') && qq.includes('computer vision'))
+return 'Computer Vision can be found in the Grades 6–8 course pathway.';
 
-   const response=await fetch("https://api.openai.com/v1/chat/completions",{
-      method:"POST",
-      headers:{
-       "Content-Type":"application/json",
-       "Authorization":"Bearer YOUR_API_KEY"
-      },
-      body:JSON.stringify({
-        model:"gpt-4o-mini",
-        messages:[{
-          role:"system",
-          content:`You are the HerWILL Sprout AI Tutor.
-          Only answer educational questions related to HerWILL courses, projects, AI literacy and learning.
-          Refuse direct quiz answers and plagiarism requests.
-          If outside scope, provide a generic safe response.
-          Knowledge Base:${knowledgeBase}`
-        },{
-          role:"user",
-          content:prompt
-        }]
-      })
-   });
+if(qq.includes('project'))
+return 'I recommend AI Answer Detective or Train an Image Classifier depending on your grade level.';
 
-   const data=await response.json();
-   return data.choices?.[0]?.message?.content || "Sorry, I couldn't respond.";
- }
+return t.fallback;
+}
 
- send.onclick=async()=>{
-   const q=input.value.trim();
-   if(!q) return;
-
-   addMsg(q,"user-msg");
-   input.value="";
-
-   const reply=await askAI(q);
-   addMsg(reply,"bot-msg");
- };
+send.onclick=()=>{
+const q=input.value.trim(); if(!q) return;
+add(q,'user-msg'); input.value='';
+add(answer(q),'bot-msg');
+};
 });
