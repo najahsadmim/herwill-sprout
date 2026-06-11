@@ -285,45 +285,42 @@ msgs.dataset.greeted='1';
 }
 };
 
-async function answer(q){
-  return "Gemini connection test successful.";
+function answer(q){
+const l=lang();
+const t=i18nTutor[l];
+
+const qq=q.toLowerCase();
+
+if(/a\)|b\)|c\)|d\)|which of the following|quiz|mcq|correct answer/.test(qq))
+return l==='bn'?'আমি সরাসরি কুইজের উত্তর দিতে পারি না, তবে ধারণাটি ব্যাখ্যা করতে পারি.':
+l==='fr'?'Je ne peux pas donner directement les réponses du quiz.':
+l==='ar'?'لا أستطيع إعطاء إجابات الاختبارات مباشرة.':
+"I can't provide direct quiz answers, but I can explain the concept.";
+
+if(qq.includes('what is ai')||qq=='ai')
+return 'Artificial Intelligence (AI) enables computers to perform tasks that usually require human intelligence such as recognizing images, understanding language and making decisions.';
+
+if(qq.includes('machine learning')||qq.includes('ml'))
+return 'Machine Learning is a branch of AI where computers learn patterns from examples instead of following only fixed rules.';
+
+if(qq.includes('computer vision'))
+return 'Computer Vision helps computers understand and analyze images and videos.';
+
+if(qq.includes('responsible ai'))
+return 'Responsible AI focuses on fairness, privacy, transparency and safety.';
+
+if(qq.includes('where') && qq.includes('computer vision'))
+return 'Computer Vision can be found in the Grades 6–8 course pathway.';
+
+if(qq.includes('project'))
+return 'I recommend AI Answer Detective or Train an Image Classifier depending on your grade level.';
+
+return t.fallback;
 }
 
-const data = await response.json();
-
-console.log("STATUS:", response.status);
-console.log("DATA:", data);
-
-if (!response.ok) {
-  return `Gemini Error ${response.status}: ${
-    data?.error?.message || "Unknown error"
-  }`;
-}
-
-return data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-       i18nTutor[l].fallback;
-
-} catch(err){
-  console.error(err);
-  return i18nTutor[l].fallback;
-}
-
-}
-
-send.onclick = async ()=>{
-
-const q = input.value.trim();
-
-if(!q) return;
-
-add(q,'user-msg');
-
-input.value='';
-
-add('Lumi is thinking...','bot-msg');
-
-const reply = await answer(q);
-
-msgs.lastChild.textContent = reply;
-
-}});
+send.onclick=()=>{
+const q=input.value.trim(); if(!q) return;
+add(q,'user-msg'); input.value='';
+add(answer(q),'bot-msg');
+};
+});
