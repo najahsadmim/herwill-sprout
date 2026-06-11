@@ -302,22 +302,26 @@ if(quizPattern.test(q)){
       : "I can't provide direct quiz answers, but I can explain the concept.";
 }
 
+try {
+
 const response = await fetch(
 `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AQ.Ab8RN6IqzFkhwEGHaR26Vhf9CP0p_D4YziW2dpp4aMTZoYn8Ug`,
 {
-method:"POST",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify({
-contents:[{
-parts:[{
-text:`
+  method:"POST",
+  headers:{
+    "Content-Type":"application/json"
+  },
+  body:JSON.stringify({
+    contents:[
+      {
+        parts:[
+          {
+            text:`
 You are Lumi, the AI Tutor for HerWILL Sprout.
 
 Rules:
-- Help students learn AI concepts.
-- Explain lessons and projects.
+- Explain AI concepts.
+- Help with lessons and projects.
 - Give examples.
 - Respond in ${
 l==="bn" ? "Bangla" :
@@ -331,21 +335,27 @@ l==="ar" ? "Arabic" :
 Student question:
 ${q}
 `
-}]
-}]
-})
+          }
+        ]
+      }
+    ]
+  })
 }
 );
 
 const data = await response.json();
 
-return (
-data.candidates?.[0]?.content?.parts?.[0]?.text ||
-"Sorry, I couldn't generate a response."
-);
+return data?.candidates?.[0]?.content?.parts?.[0]?.text ||
+       i18nTutor[l].fallback;
+
+} catch(err){
+  console.error(err);
+  return i18nTutor[l].fallback;
 }
 
-send.onclick = async () => {
+}
+
+send.onclick = async ()=>{
 
 const q = input.value.trim();
 
@@ -355,10 +365,10 @@ add(q,'user-msg');
 
 input.value='';
 
-add('Thinking...','bot-msg');
+add('Lumi is thinking...','bot-msg');
 
 const reply = await answer(q);
 
 msgs.lastChild.textContent = reply;
 
-});
+}});
