@@ -645,7 +645,7 @@ keywords:[
 responses:{
 en:"For the latest contact information, programs and opportunities, please visit www.herwill.org."
 }
-};
+}
 
 ];
 
