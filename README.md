@@ -131,7 +131,6 @@ Planned future enhancements include:
 * Mentorship opportunities
 * Certification pathways
 
----
 
 ## Sustainability Model
 
