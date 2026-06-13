@@ -81,6 +81,120 @@ ar:"يُمكّن الذكاء الاصطناعي الحواسيب من أداء 
 },
 
 {
+keywords:[
+"real life examples of machine learning",
+"examples of machine learning in real life",
+"give me examples of machine learning",
+"machine learning examples",
+"where is machine learning used"
+],
+responses:{
+en:"Machine Learning is used in many everyday applications. Examples include Netflix and YouTube recommending videos, Spotify suggesting music, Google Maps predicting traffic, email spam filters detecting unwanted messages, banks identifying fraudulent transactions and smartphones recognizing faces for unlocking devices."
+}
+},
+
+{
+keywords:[
+"how is machine learning used in image processing",
+"machine learning in image processing",
+"machine learning for images",
+"image processing using machine learning"
+],
+responses:{
+en:"Machine Learning helps computers understand images by learning patterns from thousands of examples. For example, a model can learn the difference between cats and dogs by analyzing many pictures. It is used in facial recognition, medical image analysis, self-driving cars, security cameras and photo-tagging on social media."
+}
+},
+
+{
+keywords:[
+"explain machine learning with examples",
+"machine learning examples",
+"how does machine learning work with examples"
+],
+responses:{
+en:"Machine Learning works by learning patterns from data. For example, if we show a computer thousands of pictures labeled 'cat' and 'dog', it learns the features of each animal. Later, when shown a new picture, it can predict whether the image contains a cat or a dog."
+}
+},
+
+{
+keywords:[
+"explain machine learning like im 10",
+"machine learning for kids",
+"machine learning in simple words",
+"simple explanation of machine learning"
+],
+responses:{
+en:"Imagine teaching a robot to recognize apples. Instead of telling it every rule, you show it hundreds of apple pictures. Over time, the robot notices patterns like shape, color and size. Machine Learning works in a similar way—it learns from examples instead of being given every instruction."
+}
+},
+
+{
+keywords:[
+"how does pattern recognition work",
+"pattern recognition examples",
+"explain pattern recognition"
+],
+responses:{
+en:"Pattern recognition is when a computer finds similarities in data. For example, a phone can recognize your face because it has learned patterns such as the distance between your eyes, the shape of your nose and other facial features. It is also used in handwriting recognition, speech recognition and fraud detection."
+}
+},
+
+{
+keywords:[
+"real life examples of computer vision",
+"computer vision examples",
+"where is computer vision used"
+],
+responses:{
+en:"Computer Vision is used in face unlock on smartphones, self-driving cars, medical scans, factory quality inspections, barcode scanners, security cameras and apps that automatically tag people in photos."
+}
+},
+
+{
+keywords:[
+"difference between ai and machine learning",
+"ai vs machine learning",
+"how is ai different from machine learning"
+],
+responses:{
+en:"Artificial Intelligence is the broader field of creating systems that can perform intelligent tasks. Machine Learning is a subset of AI that allows computers to learn from data. In simple terms, all Machine Learning is AI, but not all AI is Machine Learning."
+}
+},
+
+{
+keywords:[
+"how does ai learn",
+"how does artificial intelligence learn",
+"how does ai get smarter"
+],
+responses:{
+en:"AI learns by analyzing data and identifying patterns. During training, it studies many examples and adjusts its internal model to improve its predictions. The more relevant and high-quality data it receives, the better it can perform."
+}
+},
+
+{
+keywords:[
+"can ai replace humans",
+"will ai replace people",
+"will ai take jobs"
+],
+responses:{
+en:"AI can automate some tasks, but it is unlikely to completely replace humans. People provide creativity, empathy, critical thinking and judgment that AI cannot fully replicate. In many industries, AI is used to assist humans rather than replace them."
+}
+},
+
+{
+keywords:[
+"what skills do i need for ai",
+"how can i learn ai",
+"become an ai engineer"
+],
+responses:{
+en:"To learn AI, start with problem-solving, mathematics, logical thinking and basic programming. Then explore topics such as Machine Learning, Computer Vision, Natural Language Processing and Responsible AI. Consistent practice through projects is one of the best ways to learn."
+}
+},
+
+{
 keywords:["machine learning","ml"],
 responses:{
 en:"Machine Learning is a branch of AI where computers learn patterns from examples and data instead of following only fixed instructions.",
@@ -398,13 +512,149 @@ keywords:["how do i complete a course"],
 responses:{
 en:"To complete a course, submit all activities and achieve at least 70% on all quizzes. This will unlock 100% course progress."
 }
+},
+
+{
+keywords:[
+"where can i find my downloads",
+"where are my downloads",
+"find my downloads"
+],
+responses:{
+en:"Downloaded learning materials can be found in the Downloads section of My Account."
 }
+},
+
+{
+keywords:[
+"where can i find my courses",
+"where are my courses",
+"find my courses"
+],
+responses:{
+en:"Your saved and active courses can be found in the My Courses section of My Account."
+}
+},
+
+{
+keywords:[
+"why does herwill sprout exist",
+"why was sprout created",
+"purpose of sprout",
+"why was herwill sprout created"
+],
+responses:{
+en:"HerWILL Sprout was created to make AI education accessible, engaging and age-appropriate for young learners. Its goal is to help students develop AI literacy, problem-solving skills and responsible technology awareness."
+}
+},
+
+{
+keywords:[
+"what is herwill",
+"tell me about herwill",
+"who is herwill",
+"about herwill"
+],
+responses:{
+en:"HerWILL is a global nonprofit organization that empowers women, youth and underrepresented communities through AI, data science, technology, leadership and educational opportunities. HerWILL helps learners build future-ready skills and access global opportunities."
+}
+},
+
+{
+keywords:[
+"who founded herwill",
+"who is the founder of herwill",
+"founder of herwill",
+"who started herwill"
+],
+responses:{
+en:"HerWILL was founded by Farhana Hasan. She created HerWILL to expand access to education, technology, leadership opportunities and AI learning for women and underrepresented youth."
+}
+},
+
+{
+keywords:[
+"when was herwill founded",
+"when was herwill created"
+],
+responses:{
+en:"HerWILL was founded in 2020 and has since grown into a global community focused on AI education, data science, leadership development and opportunities for women and youth."
+}
+},
+
+{
+keywords:[
+"what does herwill do",
+"what programs does herwill offer",
+"what does herwill provide"
+],
+responses:{
+en:"HerWILL provides educational programs, AI and data science training, mentorship, leadership development, internships, global collaborations and learning opportunities for women and youth."
+}
+},
+
+{
+keywords:[
+"what is herwill's mission",
+"herwill mission",
+"why does herwill exist"
+],
+responses:{
+en:"HerWILL's mission is to empower women, youth and underrepresented communities through education, mentorship, technology and leadership opportunities while promoting greater inclusion in STEM and AI."
+}
+},
+
+{
+keywords:[
+"where is herwill based",
+"where is herwill located"
+],
+responses:{
+en:"HerWILL is a global nonprofit organization headquartered in Atlanta, Georgia, with programs, partnerships and communities across multiple countries."
+}
+},
+
+{
+keywords:[
+"how many people has herwill reached",
+"herwill impact",
+"herwill achievements"
+],
+responses:{
+en:"HerWILL has built a global community, awarded scholarships, delivered AI and data science programs and created opportunities for thousands of learners worldwide."
+}
+},
+
+{
+keywords:[
+"how can i join herwill",
+"join herwill",
+"become a member of herwill"
+],
+responses:{
+en:"You can learn more about HerWILL programs, opportunities, mentorships and community initiatives by visiting www.herwill.org."
+}
+},
+
+{
+keywords:[
+"how can i contact herwill",
+"contact herwill",
+"reach herwill"
+],
+responses:{
+en:"For the latest contact information, programs and opportunities, please visit www.herwill.org."
+}
+};
 
 ];
 
 const lumiFallback = {
-en:"I am designed to help with HerWILL Sprout lessons, projects and AI learning. Please ask me something related to AI, technology or your course.",
-bn:"আমি HerWILL Sprout-এর পাঠ, প্রজেক্ট ও AI শেখার বিষয়ে সাহায্য করার জন্য তৈরি।",
-fr:"Je suis conçu pour aider avec les cours, projets et concepts d’IA de HerWILL Sprout.",
-ar:"تم تصميمي للمساعدة في دروس ومشاريع HerWILL Sprout ومفاهيم الذكاء الاصطناعي."
+en:"I'm here to help with HerWILL Sprout lessons, projects, AI concepts and information about HerWILL. If you'd like to learn more about HerWILL, please visit www.herwill.org.",
+
+bn:"আমি HerWILL Sprout-এর পাঠ, প্রজেক্ট, AI ধারণা এবং HerWILL সম্পর্কে তথ্য দিতে সাহায্য করার জন্য এখানে আছি। HerWILL সম্পর্কে আরও জানতে চাইলে অনুগ্রহ করে www.herwill.org ভিজিট করুন।",
+
+fr:"Je suis là pour vous aider avec les leçons, projets et concepts d’IA de HerWILL Sprout, ainsi qu’avec des informations sur HerWILL. Pour en savoir plus, veuillez visiter www.herwill.org.",
+
+ar:"أنا هنا لمساعدتك في دروس ومشاريع HerWILL Sprout ومفاهيم الذكاء الاصطناعي، بالإضافة إلى تقديم معلومات حول HerWILL. لمعرفة المزيد، يرجى زيارة www.herwill.org."
 };
